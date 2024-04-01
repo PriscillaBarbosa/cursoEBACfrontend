@@ -1,0 +1,75 @@
+@use 'config/reset';
+@use 'config/variaveis';
+@use 'secoes/produtos';
+@use 'sass:math';
+
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoEmPixel, $contextoEmPixel);
+}
+
+body {
+    background-color: variaveis.$corCorpo;
+
+    li {
+        list-style: none;
+    }
+
+    .container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+header {
+    background-color: variaveis.$corCabecalho;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+    }
+
+    a {
+        color: variaveis.$corTextoBotao;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+}
+
