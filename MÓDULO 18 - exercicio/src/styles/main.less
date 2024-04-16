@@ -1,0 +1,59 @@
+@corDoHeader: #571d1d;
+@corDoBody: #c3acac;
+@corDoTexto: #221818;
+@corTextoLink: #fff;
+
+body {
+    background-color: @corDoBody;
+    color:@corDoTexto;
+}
+
+header {
+    background-color: @corDoHeader;
+    text-align: center;
+    justify-content: center;
+
+    .menu {
+        list-style-type: none;
+        text-align: center;
+        padding-bottom: 5px;
+
+        li a {
+        text-decoration: none;
+        color: @corTextoLink;
+        }
+    }
+}
+
+section {
+
+    .products .product-item {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    li a {
+        color: @corTextoLink;
+        text-decoration: none;
+        }
+
+    h2 {
+    font-size: 2em;
+    text-align: center;
+    }
+
+    p {
+    font-size: 1em;  
+    text-align: center;  
+    }
+}
+
+.form {
+    text-align: center;
+    justify-content: center;
+    
+    .button {
+        padding-top: 5px;
+    }
+
+}
